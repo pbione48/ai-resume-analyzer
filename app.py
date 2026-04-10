@@ -6,6 +6,8 @@ from openai import OpenAI
 load_dotenv()
 
 api_key = os.getenv("OPENAI_API_KEY") or st.secrets["OPENAI_API_KEY"]
+st.write("Key loaded:", bool(api_key))
+
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def clear_resume():
